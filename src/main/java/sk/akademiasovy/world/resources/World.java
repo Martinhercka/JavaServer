@@ -19,10 +19,17 @@ public class World
         MySQL mysql=new MySQL();
         List<String> list = mysql.getCountries();
 
+        boolean b = false;
 
         String result = "{\"name\":[";
         for (String temp:list)
         {
+            if(b==true)
+            {
+                result+=',';
+            }
+            else
+                b=true;
             result+="\""+temp+"\"";
 
         }
