@@ -21,7 +21,7 @@ public class World
 
         boolean b = false;
 
-        String result = "{\"name\":[";
+        String result = "ajaxRequest({\"name\":[";
         for (String temp:list)
         {
             if(b==true)
@@ -33,7 +33,7 @@ public class World
             result+="\""+temp+"\"";
 
         }
-        result+="]}";
+        result+="]})";
         return result;
 
     }
